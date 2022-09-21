@@ -13,7 +13,10 @@
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
 # Ejercicios con funciones y módulos
+from itertools import count
 import random
+
+from profundizacion_1 import lista_aleatoria
 
 '''
 Enunciado:
@@ -37,13 +40,17 @@ en la lista pueden usar el método nativo de list "count"
 # Aquí copiar la función "lista_aleatoria"
 # ya elaborada en el ejercicio anterior
 
+from profundizacion_1 import lista_aleatoria
 
 # --------------------------------
 
 # --------------------------------
 # Aquí dentro definir la función contar
 
+def contar(lista_contar,mi_numero):
+    repite = lista_contar.count(mi_numero)
 
+    return repite
 # --------------------------------
 
 if __name__ == '__main__':
@@ -54,16 +61,16 @@ if __name__ == '__main__':
     # entre los números 1 al 6 inclusive
 
     # lista_numeros = lista_aleatoria(...)
-
+    mi_lista = lista_aleatoria(1,6,5)
     # Imprimir en pantalla "lista_numeros" que tendrá
     # los valores retornado por la función "lista_aleatoria":
 
     # print(lista_numeros)
-
+    print("El listado de valores es: ",mi_lista)
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # en la lista aleatoria creada
     # cantidad_tres = contar(lista_numeros, 3)
-
+    cantidad_tres = contar(mi_lista,3)
     # print(cantidad_tres)
-
+    print("Las veces que se repite el 3 es: ", cantidad_tres)
     print("terminamos")
